@@ -73,7 +73,8 @@
   color: var(--ink-600);
 }
 
-.side__user .avatar {
+.side__user .avatar,
+.side__user img.avatar {
   width: 26px;
   height: 26px;
 }
@@ -288,6 +289,16 @@
   font-size: 12px;
   color: var(--ink-400);
   margin-top: 3px;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.member .cell-name {
+  display: block;
 }
 
 .link-action {
@@ -685,12 +696,36 @@
 }
 
 .login-aside {
+  position: relative;
   background: var(--dark);
   color: #fff;
   padding: 64px 56px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+}
+
+.login-aside__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.login-aside::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(165deg, rgba(16, 24, 32, 0.9), rgba(16, 24, 32, 0.78));
+}
+
+.login-aside > :not(.login-aside__photo) {
+  position: relative;
+  z-index: 2;
 }
 
 .login-aside .wordmark {

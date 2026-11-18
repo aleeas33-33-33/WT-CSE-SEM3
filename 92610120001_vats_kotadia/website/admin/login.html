@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to the Falcon Crest Ventures partner console.">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>Sign in — Falcon Crest console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="login-page">
+
+    <!-- ============ Brand panel ============ -->
+    <aside class="login-aside">
+      <a class="wordmark" href="../index.html">Falcon Crest</a>
+      <div>
+        <span class="eyebrow">Partner console</span>
+        <h2>Portfolio, reporting and allocation in one place.</h2>
+        <p>Sixty-one active companies, thirty-four limited partners and three funds. Access is scoped to your role.</p>
+      </div>
+      <p class="body-sm login-support">Trouble signing in? Reach operations at ops@falconcrest.vc</p>
+    </aside>
+
+    <!-- ============ Sign-in form — VALIDATED FORM 2 of 2 ============ -->
+    <main class="login-main">
+      <div class="login-card">
+        <span class="eyebrow">Secure area</span>
+        <h1>Sign in</h1>
+        <p>Use your Falcon Crest address. Sessions expire after eight hours.</p>
+
+        <form id="login-form" data-validate novalidate
+              data-success="Signed in. Opening the console."
+              data-redirect="index.html">
+
+          <div class="form-status" role="status"></div>
+
+          <div class="field">
+            <label for="login-email">Work email</label>
+            <input type="email" id="login-email" name="email" placeholder="you@falconcrest.vc" autocomplete="username"
+                   data-rule-required="Enter your work email address."
+                   data-rule-email="That address doesn't look right — check for a missing @ or domain."
+                   data-rule-pattern="@falconcrest\.vc$|Use your @falconcrest.vc address. Guests sign in through the LP portal.">
+            <span class="field__error"></span>
+          </div>
+
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="••••••••••" autocomplete="current-password"
+                   data-rule-required="Enter your password."
+                   data-rule-min="8|Passwords are at least 8 characters."
+                   data-rule-pattern="(?=.*[A-Za-z])(?=.*[0-9])|Include at least one letter and one number.">
+            <span class="field__error"></span>
+          </div>
+
+          <div class="login-meta">
+            <label class="checkbox-inline" for="remember">
+              <input type="checkbox" id="remember" name="remember">
+              Keep me signed in
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">Sign in</button>
+        </form>
+
+        <div class="demo-hint">
+          <strong>Marking note:</strong> this is a front-end project with no server, so any
+          address ending <code>@falconcrest.vc</code> with a password of 8+ characters
+          containing a letter and a number will pass. Try
+          <code>m.reyes@falconcrest.vc</code> / <code>falcon2026</code>.
+        </div>
+
+        <p class="body-sm stack-gap">
+          <a href="../index.html">Back to the public site</a>
+        </p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../js/validation.js"></script>
+</body>
+</html>

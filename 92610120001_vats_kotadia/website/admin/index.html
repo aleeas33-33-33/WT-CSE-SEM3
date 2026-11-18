@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>Portfolio companies — Falcon Crest console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+
+    <!-- ============ Sidebar ============ -->
+    <nav class="side" aria-label="Console">
+      <div class="side__brand">
+        <a class="wordmark" href="../index.html">Falcon Crest</a>
+      </div>
+      <div class="side__nav">
+        <a href="index.html" aria-current="page">Portfolio</a>
+        <a href="lp-reporting.html">LP reporting</a>
+        <a href="allocation.html">Fund &amp; allocation</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="team.html">Team &amp; access</a>
+      </div>
+      <div class="side__user">
+        <span class="avatar" aria-hidden="true">MR</span>
+        <span>M. Reyes · GP</span>
+      </div>
+    </nav>
+
+    <!-- ============ Main ============ -->
+    <div class="main" id="main">
+
+      <div class="topbar">
+        <div class="topbar__lead">
+          <button class="btn btn--secondary side-toggle" type="button" aria-expanded="false">Menu</button>
+          <h1>Portfolio companies</h1>
+        </div>
+        <div class="topbar__actions">
+          <div class="search">
+            <label class="sr-only" for="co-search">Search companies</label>
+            <input type="text" id="co-search" placeholder="Search 61 companies" data-table-search="co-table" autocomplete="off">
+          </div>
+          <button class="btn btn--secondary" type="button">Export</button>
+          <a class="btn btn--primary" href="add-company.html">Add company</a>
+        </div>
+      </div>
+
+      <!-- KPI strip -->
+      <div class="kpi-strip">
+        <div class="kpi">
+          <span class="eyebrow">Invested cost</span>
+          <p class="kpi__value">$412M</p>
+        </div>
+        <div class="kpi">
+          <span class="eyebrow">Fair value</span>
+          <p class="kpi__value">$1.68B</p>
+        </div>
+        <div class="kpi">
+          <span class="eyebrow">Gross MOIC</span>
+          <p class="kpi__value">4.1&times;</p>
+        </div>
+        <div class="kpi">
+          <span class="eyebrow">Reporting overdue</span>
+          <p class="kpi__value kpi__value--warn">7</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="chip-row" role="group" aria-label="Filter companies">
+          <button class="chip is-active" type="button">All funds</button>
+          <button class="chip" type="button">Any sector</button>
+          <button class="chip" type="button">Any stage</button>
+          <button class="chip" type="button">Board seat</button>
+        </div>
+        <p class="body-sm">Click any column heading to sort</p>
+      </div>
+
+      <div class="workspace__main">
+        <div class="table-scroll">
+          <table class="data-table data-table--wide" id="co-table" data-sortable>
+            <caption class="sr-only">Portfolio companies by fair value</caption>
+            <thead>
+              <tr>
+                <th data-sort="text" scope="col">Company</th>
+                <th data-sort="text" scope="col">Sector</th>
+                <th data-sort="text" scope="col">Fund</th>
+                <th data-sort="text" scope="col">Stage</th>
+                <th data-sort="number" scope="col">Ownership</th>
+                <th data-sort="number" scope="col">Cost</th>
+                <th data-sort="number" scope="col">Fair value</th>
+                <th data-sort="number" scope="col">MOIC</th>
+                <th data-sort="text" scope="col">Last report</th>
+                <th data-sort="text" scope="col">Status</th>
+                <th scope="col"><span class="sr-only">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-name">SpaceX</td><td>Space</td><td>II</td><td>Series B</td>
+                <td class="num">2.1%</td><td class="num">$14M</td><td class="num">$302M</td><td class="num">21.6&times;</td>
+                <td>Jul 2026</td><td><span class="pill pill--current">Current</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">Stripe</td><td>Fintech</td><td>I</td><td>Seed</td>
+                <td class="num">1.4%</td><td class="num">$6M</td><td class="num">$248M</td><td class="num">41.3&times;</td>
+                <td>Jul 2026</td><td><span class="pill pill--current">Current</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">Anthropic</td><td>AI</td><td>III</td><td>Series A</td>
+                <td class="num">1.9%</td><td class="num">$28M</td><td class="num">$236M</td><td class="num">8.4&times;</td>
+                <td>Jun 2026</td><td><span class="pill pill--current">Current</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">Databricks</td><td>Data</td><td>II</td><td>Series A</td>
+                <td class="num">2.6%</td><td class="num">$19M</td><td class="num">$194M</td><td class="num">10.2&times;</td>
+                <td>Jul 2026</td><td><span class="pill pill--current">Current</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">Anduril</td><td>Defence</td><td>III</td><td>Seed</td>
+                <td class="num">3.4%</td><td class="num">$22M</td><td class="num">$181M</td><td class="num">8.2&times;</td>
+                <td>May 2026</td><td><span class="pill pill--overdue">Overdue</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">Deel</td><td>Work</td><td>III</td><td>Seed</td>
+                <td class="num">4.1%</td><td class="num">$11M</td><td class="num">$96M</td><td class="num">8.7&times;</td>
+                <td>Jul 2026</td><td><span class="pill pill--current">Current</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">CRED</td><td>Fintech</td><td>IV</td><td>Series B</td>
+                <td class="num">2.8%</td><td class="num">$24M</td><td class="num">$71M</td><td class="num">3.0&times;</td>
+                <td>Jun 2026</td><td><span class="pill pill--current">Current</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">Zepto</td><td>Commerce</td><td>IV</td><td>Series A</td>
+                <td class="num">5.2%</td><td class="num">$18M</td><td class="num">$63M</td><td class="num">3.5&times;</td>
+                <td>Apr 2026</td><td><span class="pill pill--overdue">Overdue</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">Harborline</td><td>Logistics</td><td>IV</td><td>Seed</td>
+                <td class="num">6.0%</td><td class="num">$9M</td><td class="num">$41M</td><td class="num">4.6&times;</td>
+                <td>Jul 2026</td><td><span class="pill pill--current">Current</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+              <tr>
+                <td class="cell-name">Ledgerly</td><td>Work</td><td>IV</td><td>Seed</td>
+                <td class="num">7.2%</td><td class="num">$5M</td><td class="num">$18M</td><td class="num">3.6&times;</td>
+                <td>Mar 2026</td><td><span class="pill pill--overdue">Overdue</span></td>
+                <td><button class="link-action" type="button">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-foot">
+          <p class="body-sm">Showing 10 of 61 companies</p>
+          <div class="pager">
+            <button class="btn btn--secondary" type="button">Previous</button>
+            <button class="btn btn--secondary" type="button">Next</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

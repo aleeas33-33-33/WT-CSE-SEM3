@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>Team &amp; permissions — Falcon Crest console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+
+    <nav class="side" aria-label="Console">
+      <div class="side__brand"><a class="wordmark" href="../index.html">Falcon Crest</a></div>
+      <div class="side__nav">
+        <a href="index.html">Portfolio</a>
+        <a href="lp-reporting.html">LP reporting</a>
+        <a href="allocation.html">Fund &amp; allocation</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="team.html" aria-current="page">Team &amp; access</a>
+      </div>
+      <div class="side__user">
+        <span class="avatar" aria-hidden="true">MR</span>
+        <span>M. Reyes · GP</span>
+      </div>
+    </nav>
+
+    <div class="main" id="main">
+
+      <div class="topbar">
+        <div class="topbar__lead">
+          <button class="btn btn--secondary side-toggle" type="button" aria-expanded="false">Menu</button>
+          <div>
+            <h1>Team &amp; permissions</h1>
+            <span class="eyebrow topbar__context">18 members · 3 pending invitations</span>
+          </div>
+        </div>
+        <div class="topbar__actions">
+          <button class="btn btn--secondary" type="button">Audit log</button>
+          <button class="btn btn--primary" type="button">Invite member</button>
+        </div>
+      </div>
+
+      <!-- ============ Tabs ============ -->
+      <div class="tabs" role="tablist" aria-label="Team sections">
+        <button class="tab" role="tab" id="tab-members" aria-controls="panel-members" aria-selected="true">Members</button>
+        <button class="tab" role="tab" id="tab-roles" aria-controls="panel-roles" aria-selected="false">Roles</button>
+        <button class="tab" role="tab" id="tab-external" aria-controls="panel-external" aria-selected="false">External access</button>
+      </div>
+
+      <div class="workspace">
+
+        <div class="workspace__main">
+
+          <!-- Members panel -->
+          <section id="panel-members" role="tabpanel" aria-labelledby="tab-members">
+            <div class="toolbar toolbar--flush">
+              <div class="chip-row" role="group" aria-label="Filter by role">
+                <button class="chip is-active" type="button">All roles</button>
+                <button class="chip" type="button">Partners</button>
+                <button class="chip" type="button">Investment</button>
+                <button class="chip" type="button">Operations</button>
+              </div>
+              <div class="search">
+                <label class="sr-only" for="member-search">Search members</label>
+                <input type="text" id="member-search" placeholder="Search members" data-table-search="member-table" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="table-scroll">
+              <table class="data-table" id="member-table" data-sortable>
+                <caption class="sr-only">Console members and their access levels</caption>
+                <thead>
+                  <tr>
+                    <th data-sort="text" scope="col">Member</th>
+                    <th data-sort="text" scope="col">Role</th>
+                    <th data-sort="text" scope="col">Funds</th>
+                    <th data-sort="text" scope="col">Access</th>
+                    <th data-sort="text" scope="col">Last active</th>
+                    <th scope="col"><span class="sr-only">Actions</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-stack"><span class="cell-name">M. Reyes</span><span class="sub">m.reyes@falconcrest.vc</span></td>
+                    <td>General Partner</td><td>All</td>
+                    <td class="val-admin">Admin</td><td>2m ago</td>
+                    <td><button class="link-action" type="button">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-stack"><span class="cell-name">J. Okafor</span><span class="sub">j.okafor@falconcrest.vc</span></td>
+                    <td>Managing Partner</td><td>All</td>
+                    <td class="val-admin">Admin</td><td>1h ago</td>
+                    <td><button class="link-action" type="button">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-stack"><span class="cell-name">S. Lindqvist</span><span class="sub">s.lindqvist@falconcrest.vc</span></td>
+                    <td>CFO</td><td>All</td>
+                    <td class="val-admin">Admin</td><td>3h ago</td>
+                    <td><button class="link-action" type="button">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-stack"><span class="cell-name">P. Nair</span><span class="sub">p.nair@falconcrest.vc</span></td>
+                    <td>Principal</td><td>IV, V</td>
+                    <td>Editor</td><td>Yesterday</td>
+                    <td><button class="link-action" type="button">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-stack"><span class="cell-name">T. Álvarez</span><span class="sub">t.alvarez@falconcrest.vc</span></td>
+                    <td>Analyst</td><td>IV, V</td>
+                    <td>Editor</td><td>Yesterday</td>
+                    <td><button class="link-action" type="button">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-stack"><span class="cell-name">R. Duarte</span><span class="sub">r.duarte@falconcrest.vc</span></td>
+                    <td>Platform</td><td>All</td>
+                    <td class="val-viewer">Viewer</td><td>4 days ago</td>
+                    <td><button class="link-action" type="button">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-stack"><span class="cell-name">Hale &amp; Cross LLP</span><span class="sub">External counsel</span></td>
+                    <td>Guest</td><td>IV</td>
+                    <td class="val-viewer">Documents only</td><td>2 weeks ago</td>
+                    <td><button class="link-action" type="button">Edit</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Roles panel -->
+          <section id="panel-roles" role="tabpanel" aria-labelledby="tab-roles" hidden>
+            <h2 class="h2 block-title-lg">What each role can do</h2>
+            <div class="table-scroll">
+              <table class="data-table">
+                <caption class="sr-only">Capabilities granted to each role</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Capability</th><th scope="col">Admin</th>
+                    <th scope="col">Editor</th><th scope="col">Viewer</th><th scope="col">Guest</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="cell-name">View portfolio &amp; valuations</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+                  <tr><td class="cell-name">Edit company records</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+                  <tr><td class="cell-name">Upload documents</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+                  <tr><td class="cell-name">Publish LP reporting</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+                  <tr><td class="cell-name">Record deployments</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+                  <tr><td class="cell-name">Manage members</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- External access panel -->
+          <section id="panel-external" role="tabpanel" aria-labelledby="tab-external" hidden>
+            <h2 class="h2 block-title-lg">External parties with access</h2>
+            <div class="table-scroll">
+              <table class="data-table">
+                <caption class="sr-only">External organisations holding console access</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Organisation</th><th scope="col">Purpose</th>
+                    <th scope="col">Scope</th><th scope="col">Expires</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="cell-name">Hale &amp; Cross LLP</td><td>Legal counsel</td><td>Fund IV documents</td><td>31 Dec 2026</td></tr>
+                  <tr><td class="cell-name">Northfield Audit</td><td>Annual audit</td><td>Valuations, read only</td><td>30 Nov 2026</td></tr>
+                  <tr><td class="cell-name">Meridian Endowment</td><td>LP portal</td><td>Own statements</td><td>No expiry</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ============ Permissions rail ============ -->
+        <aside class="rail" aria-label="Permission detail">
+          <div class="rail__block">
+            <span class="eyebrow">Role permissions — Editor</span>
+            <ul class="check-list">
+              <li><span class="box on" aria-hidden="true"></span> View portfolio &amp; valuations</li>
+              <li><span class="box on" aria-hidden="true"></span> Edit company records</li>
+              <li><span class="box on" aria-hidden="true"></span> Upload documents</li>
+              <li class="off"><span class="box" aria-hidden="true"></span> Publish LP reporting</li>
+              <li class="off"><span class="box" aria-hidden="true"></span> Record deployments</li>
+              <li class="off"><span class="box" aria-hidden="true"></span> Manage members</li>
+            </ul>
+          </div>
+
+          <div class="rail__block">
+            <span class="eyebrow">Pending invitations</span>
+            <div class="invite">
+              <div>
+                <p class="email">k.mensah@falconcrest.vc</p>
+                <p class="body-sm">Analyst · sent 3 days ago</p>
+              </div>
+              <button class="link-action" type="button">Resend</button>
+            </div>
+            <div class="invite">
+              <div>
+                <p class="email">audit@northfieldllp.com</p>
+                <p class="body-sm">Guest · sent 6 days ago</p>
+              </div>
+              <button class="link-action" type="button">Resend</button>
+            </div>
+          </div>
+
+          <div class="rail__block">
+            <span class="eyebrow">Security</span>
+            <div class="metric-row"><span class="label">Two-factor required</span><span class="value val-good">On</span></div>
+            <div class="metric-row"><span class="label">Single sign-on (Okta)</span><span class="value val-good">On</span></div>
+            <div class="metric-row"><span class="label">Session timeout</span><span class="value">8 hours</span></div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

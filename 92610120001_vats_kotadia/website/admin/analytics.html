@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>Analytics — Falcon Crest console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+
+    <nav class="side" aria-label="Console">
+      <div class="side__brand"><a class="wordmark" href="../index.html">Falcon Crest</a></div>
+      <div class="side__nav">
+        <a href="index.html">Portfolio</a>
+        <a href="lp-reporting.html">LP reporting</a>
+        <a href="allocation.html">Fund &amp; allocation</a>
+        <a href="analytics.html" aria-current="page">Analytics</a>
+        <a href="team.html">Team &amp; access</a>
+      </div>
+      <div class="side__user">
+        <span class="avatar" aria-hidden="true">MR</span>
+        <span>M. Reyes · GP</span>
+      </div>
+    </nav>
+
+    <div class="main main--paper" id="main">
+
+      <div class="topbar">
+        <div class="topbar__lead">
+          <button class="btn btn--secondary side-toggle" type="button" aria-expanded="false">Menu</button>
+          <h1>Analytics</h1>
+        </div>
+        <div class="topbar__actions">
+          <div class="chip-row" role="group" aria-label="Choose period">
+            <button class="chip" type="button">Quarter</button>
+            <button class="chip is-active" type="button">Year</button>
+            <button class="chip" type="button">All time</button>
+          </div>
+          <button class="btn btn--secondary" type="button">Export CSV</button>
+        </div>
+      </div>
+
+      <div class="kpi-strip kpi-strip--5 kpi-strip--white">
+        <div class="kpi"><span class="eyebrow">Deals seen</span><p class="kpi__value">2,418</p></div>
+        <div class="kpi"><span class="eyebrow">First meetings</span><p class="kpi__value">311</p></div>
+        <div class="kpi"><span class="eyebrow">Diligence</span><p class="kpi__value">64</p></div>
+        <div class="kpi"><span class="eyebrow">Invested</span><p class="kpi__value">17</p></div>
+        <div class="kpi"><span class="eyebrow">Hit rate</span><p class="kpi__value">0.7%</p></div>
+      </div>
+
+      <div class="workspace__main">
+
+        <!-- ============ Funnel and value creation ============ -->
+        <div class="panel-row panel-row--2">
+
+          <section class="panel">
+            <h2 class="h2">Funnel by stage</h2>
+            <ul class="funnel">
+              <li>
+                <span class="label">Sourced</span>
+                <div class="track"><div class="fill" style="width:100%"></div></div>
+                <span class="count">2418</span>
+              </li>
+              <li>
+                <span class="label">Screened</span>
+                <div class="track"><div class="fill" style="width:47%"></div></div>
+                <span class="count">1132</span>
+              </li>
+              <li>
+                <span class="label">First meeting</span>
+                <div class="track"><div class="fill" style="width:13%"></div></div>
+                <span class="count">311</span>
+              </li>
+              <li>
+                <span class="label">Diligence</span>
+                <div class="track"><div class="fill" style="width:3%"></div></div>
+                <span class="count">64</span>
+              </li>
+              <li>
+                <span class="label">Committee</span>
+                <div class="track"><div class="fill" style="width:2%"></div></div>
+                <span class="count">29</span>
+              </li>
+              <li>
+                <span class="label">Invested</span>
+                <div class="track"><div class="fill" style="width:1%"></div></div>
+                <span class="count">17</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="panel">
+            <h2 class="h2">Value creation by vintage</h2>
+            <div class="column-chart">
+              <div class="col">
+                <div class="seg seg--rvpi" style="height:28%"></div>
+                <div class="seg seg--dpi" style="height:46%"></div>
+              </div>
+              <div class="col">
+                <div class="seg seg--rvpi" style="height:40%"></div>
+                <div class="seg seg--dpi" style="height:30%"></div>
+              </div>
+              <div class="col">
+                <div class="seg seg--rvpi" style="height:55%"></div>
+                <div class="seg seg--dpi" style="height:14%"></div>
+              </div>
+              <div class="col">
+                <div class="seg seg--rvpi" style="height:62%"></div>
+                <div class="seg seg--dpi" style="height:6%"></div>
+              </div>
+            </div>
+            <div class="chart-axis">
+              <span>Fund I</span><span>Fund II</span><span>Fund III</span><span>Fund IV</span>
+            </div>
+            <div class="legend">
+              <span><i class="key-dpi"></i> DPI — realised</span>
+              <span><i class="key-rvpi"></i> RVPI — unrealised</span>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ============ Channels, timing, losses ============ -->
+        <div class="panel-row panel-row--3">
+
+          <section class="panel">
+            <h2 class="h2">Sourcing channel</h2>
+            <div class="table-scroll">
+              <table class="data-table table--compact">
+                <caption class="sr-only">Share of deals by sourcing channel</caption>
+                <tbody>
+                  <tr><td>Founder referral</td><td class="num cell-name num-right">41%</td></tr>
+                  <tr><td>Partner network</td><td class="num cell-name num-right">28%</td></tr>
+                  <tr><td>Inbound form</td><td class="num cell-name num-right">19%</td></tr>
+                  <tr><td>Co-investor</td><td class="num cell-name num-right">12%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2 class="h2">Time to decision</h2>
+            <div class="histogram">
+              <div class="hbar" style="height:18%"></div>
+              <div class="hbar" style="height:34%"></div>
+              <div class="hbar" style="height:56%"></div>
+              <div class="hbar peak" style="height:88%"></div>
+              <div class="hbar peak" style="height:100%"></div>
+              <div class="hbar" style="height:72%"></div>
+              <div class="hbar" style="height:48%"></div>
+              <div class="hbar" style="height:31%"></div>
+              <div class="hbar" style="height:20%"></div>
+              <div class="hbar" style="height:12%"></div>
+            </div>
+            <p class="body-sm chart-note">Median 9 days. 90th percentile 24 days.</p>
+          </section>
+
+          <section class="panel">
+            <h2 class="h2">Loss reasons</h2>
+            <ul class="bar-list">
+              <li>
+                <div class="bar-head"><span class="label">Price</span><span class="value">38%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:95%"></div></div>
+              </li>
+              <li>
+                <div class="bar-head"><span class="label">Lost to another lead</span><span class="value">31%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:78%"></div></div>
+              </li>
+              <li>
+                <div class="bar-head"><span class="label">Off thesis</span><span class="value">19%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:48%"></div></div>
+              </li>
+              <li>
+                <div class="bar-head"><span class="label">Team</span><span class="value">12%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:30%"></div></div>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>Fund &amp; capital allocation — Falcon Crest console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+
+    <nav class="side" aria-label="Console">
+      <div class="side__brand"><a class="wordmark" href="../index.html">Falcon Crest</a></div>
+      <div class="side__nav">
+        <a href="index.html">Portfolio</a>
+        <a href="lp-reporting.html">LP reporting</a>
+        <a href="allocation.html" aria-current="page">Fund &amp; allocation</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="team.html">Team &amp; access</a>
+      </div>
+      <div class="side__user">
+        <span class="avatar" aria-hidden="true">MR</span>
+        <span>M. Reyes · GP</span>
+      </div>
+    </nav>
+
+    <div class="main" id="main">
+
+      <div class="topbar">
+        <div class="topbar__lead">
+          <button class="btn btn--secondary side-toggle" type="button" aria-expanded="false">Menu</button>
+          <h1>Fund IV — capital allocation</h1>
+        </div>
+        <div class="topbar__actions">
+          <div class="chip-row" role="group" aria-label="Choose fund">
+            <button class="chip" type="button">Fund III</button>
+            <button class="chip is-active" type="button">Fund IV</button>
+            <button class="chip" type="button">Fund V</button>
+          </div>
+          <button class="btn btn--primary" type="button">Record deployment</button>
+        </div>
+      </div>
+
+      <!-- ============ Allocation bar ============ -->
+      <section class="band band--allocation" aria-label="Fund allocation">
+        <div class="alloc-head">
+          <span class="eyebrow">$600M committed · $384M deployed · 64%</span>
+          <span class="eyebrow">Vintage 2023 · 4 of 10 years</span>
+        </div>
+        <div class="alloc-bar">
+          <div class="alloc-seg alloc-seg--initial" style="flex:228">Initial cheques · $228M</div>
+          <div class="alloc-seg alloc-seg--follow" style="flex:156">Follow-ons · $156M</div>
+          <div class="alloc-seg alloc-seg--reserved" style="flex:132">Reserved · $132M</div>
+          <div class="alloc-seg alloc-seg--free" style="flex:84">Unallocated · $84M</div>
+        </div>
+      </section>
+
+      <div class="kpi-strip kpi-strip--white">
+        <div class="kpi">
+          <span class="eyebrow">Dry powder</span>
+          <p class="kpi__value">$216M</p>
+        </div>
+        <div class="kpi">
+          <span class="eyebrow">Reserve ratio</span>
+          <p class="kpi__value">1 : 2.4</p>
+        </div>
+        <div class="kpi">
+          <span class="eyebrow">Average initial cheque</span>
+          <p class="kpi__value">$4.9M</p>
+        </div>
+        <div class="kpi">
+          <span class="eyebrow">Pace vs plan</span>
+          <p class="kpi__value kpi__value--ok">+8%</p>
+        </div>
+      </div>
+
+      <div class="workspace">
+
+        <div class="workspace__main">
+          <h2 class="h2 block-title">Reserve plan by company</h2>
+
+          <div class="table-scroll">
+            <table class="data-table" data-sortable>
+              <caption class="sr-only">Reserve plan for each Fund IV company</caption>
+              <thead>
+                <tr>
+                  <th data-sort="text" scope="col">Company</th>
+                  <th data-sort="number" scope="col">Deployed</th>
+                  <th data-sort="number" scope="col">Reserved</th>
+                  <th data-sort="text" scope="col">Next round</th>
+                  <th data-sort="text" scope="col">Recommendation</th>
+                  <th scope="col"><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-name">Anthropic</td><td class="num">$28M</td><td class="num">$40M</td>
+                  <td>Q4 2026</td><td class="val-positive">Max pro-rata</td>
+                  <td><button class="link-action" type="button">Adjust</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-name">Anduril</td><td class="num">$22M</td><td class="num">$26M</td>
+                  <td>Q1 2027</td><td class="val-positive">Max pro-rata</td>
+                  <td><button class="link-action" type="button">Adjust</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-name">Zepto</td><td class="num">$18M</td><td class="num">$18M</td>
+                  <td>Q3 2026</td><td class="val-caution">Partial</td>
+                  <td><button class="link-action" type="button">Adjust</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-name">CRED</td><td class="num">$24M</td><td class="num">$12M</td>
+                  <td>Q2 2027</td><td class="val-caution">Partial</td>
+                  <td><button class="link-action" type="button">Adjust</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-name">Deel</td><td class="num">$11M</td><td class="num">$0M</td>
+                  <td>&mdash;</td><td>No reserve</td>
+                  <td><button class="link-action" type="button">Adjust</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-name">Databricks</td><td class="num">$19M</td><td class="num">$36M</td>
+                  <td>Q4 2026</td><td class="val-positive">Max pro-rata</td>
+                  <td><button class="link-action" type="button">Adjust</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="rail" aria-label="Allocation detail">
+          <div class="rail__block">
+            <span class="eyebrow">Allocation by sector</span>
+            <ul class="bar-list">
+              <li>
+                <div class="bar-head"><span class="label">Compute &amp; AI</span><span class="value">34%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:85%"></div></div>
+              </li>
+              <li>
+                <div class="bar-head"><span class="label">Defence &amp; space</span><span class="value">27%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:67%"></div></div>
+              </li>
+              <li>
+                <div class="bar-head"><span class="label">Fintech</span><span class="value">21%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:52%"></div></div>
+              </li>
+              <li>
+                <div class="bar-head"><span class="label">Commerce</span><span class="value">11%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:27%"></div></div>
+              </li>
+              <li>
+                <div class="bar-head"><span class="label">Work</span><span class="value">7%</span></div>
+                <div class="progress"><div class="progress__fill" style="width:17%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rail__block">
+            <span class="eyebrow">Deployment pace</span>
+            <div class="column-chart chart-h-140 rail__chart">
+              <div class="col"><div class="seg" style="height:22%"></div></div>
+              <div class="col"><div class="seg" style="height:38%"></div></div>
+              <div class="col"><div class="seg" style="height:51%"></div></div>
+              <div class="col"><div class="seg" style="height:64%"></div></div>
+              <div class="col"><div class="seg" style="height:73%"></div></div>
+              <div class="col"><div class="seg" style="height:88%"></div></div>
+            </div>
+            <div class="chart-axis">
+              <span>2023</span><span>2024</span><span>2025</span><span>H1 26</span><span>H2 26</span><span>Plan</span>
+            </div>
+          </div>
+
+          <div class="rail__block callout">
+            <span class="eyebrow val-caution">Flag</span>
+            <p>Reserves committed exceed dry powder by $16M if every pro-rata right is exercised.</p>
+            <button class="btn btn--secondary btn--block" type="button">Model scenarios</button>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>LP reporting — Falcon Crest console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+
+    <nav class="side" aria-label="Console">
+      <div class="side__brand"><a class="wordmark" href="../index.html">Falcon Crest</a></div>
+      <div class="side__nav">
+        <a href="index.html">Portfolio</a>
+        <a href="lp-reporting.html" aria-current="page">LP reporting</a>
+        <a href="allocation.html">Fund &amp; allocation</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="team.html">Team &amp; access</a>
+      </div>
+      <div class="side__user">
+        <span class="avatar" aria-hidden="true">MR</span>
+        <span>M. Reyes · GP</span>
+      </div>
+    </nav>
+
+    <div class="main" id="main">
+
+      <div class="topbar">
+        <div class="topbar__lead">
+          <button class="btn btn--secondary side-toggle" type="button" aria-expanded="false">Menu</button>
+          <div>
+            <h1>LP reporting</h1>
+            <span class="eyebrow topbar__context">Q2 2026 · 34 limited partners</span>
+          </div>
+        </div>
+        <div class="topbar__actions">
+          <button class="btn btn--secondary" type="button">Preview letter</button>
+          <button class="btn btn--primary" type="button">Publish Q2 pack</button>
+        </div>
+      </div>
+
+      <div class="workspace">
+
+        <!-- ============ Pack builder ============ -->
+        <div class="workspace__main">
+
+          <div class="pack-card">
+            <div class="pack-card__head">
+              <h2 class="h2">Q2 2026 pack</h2>
+              <span class="eyebrow">4 of 6 sections ready</span>
+            </div>
+            <div class="progress" role="img" aria-label="Four of six sections ready">
+              <div class="progress__fill" style="width:66.6%"></div>
+            </div>
+
+            <div class="status-grid status-grid--spaced">
+              <div class="status-card">
+                <h3>Capital account statements</h3>
+                <span class="state state--ready">Ready</span>
+              </div>
+              <div class="status-card">
+                <h3>Valuation schedule</h3>
+                <span class="state state--ready">Ready</span>
+              </div>
+              <div class="status-card">
+                <h3>Portfolio commentary</h3>
+                <span class="state state--ready">Ready</span>
+              </div>
+              <div class="status-card">
+                <h3>Cash flow summary</h3>
+                <span class="state state--ready">Ready</span>
+              </div>
+              <div class="status-card">
+                <h3>GP letter</h3>
+                <span class="state state--review">In review</span>
+              </div>
+              <div class="status-card">
+                <h3>Audit confirmation</h3>
+                <span class="state state--waiting">Waiting</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar toolbar--flush-sm">
+            <h2 class="h2">Limited partners</h2>
+            <div class="search">
+              <label class="sr-only" for="lp-search">Search limited partners</label>
+              <input type="text" id="lp-search" placeholder="Search LPs" data-table-search="lp-table" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="table-scroll">
+            <table class="data-table" id="lp-table" data-sortable>
+              <caption class="sr-only">Limited partners and Q2 pack delivery status</caption>
+              <thead>
+                <tr>
+                  <th data-sort="text" scope="col">Partner</th>
+                  <th data-sort="text" scope="col">Type</th>
+                  <th data-sort="number" scope="col">Commitment</th>
+                  <th data-sort="number" scope="col">Called</th>
+                  <th data-sort="number" scope="col">Distributed</th>
+                  <th data-sort="number" scope="col">NAV</th>
+                  <th data-sort="text" scope="col">Q2 pack</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-name">Meridian Endowment</td><td>Endowment</td>
+                  <td class="num">$120M</td><td class="num">78%</td><td class="num">$61M</td><td class="num">$402M</td>
+                  <td class="val-positive">Viewed</td>
+                </tr>
+                <tr>
+                  <td class="cell-name">Halverson Family Office</td><td>Family office</td>
+                  <td class="num">$60M</td><td class="num">78%</td><td class="num">$30M</td><td class="num">$198M</td>
+                  <td class="val-positive">Viewed</td>
+                </tr>
+                <tr>
+                  <td class="cell-name">Northbridge Pension</td><td>Pension</td>
+                  <td class="num">$150M</td><td class="num">74%</td><td class="num">$72M</td><td class="num">$488M</td>
+                  <td class="val-good">Sent</td>
+                </tr>
+                <tr>
+                  <td class="cell-name">Kestrel Fund of Funds</td><td>Fund of funds</td>
+                  <td class="num">$45M</td><td class="num">78%</td><td class="num">$22M</td><td class="num">$147M</td>
+                  <td class="val-good">Sent</td>
+                </tr>
+                <tr>
+                  <td class="cell-name">A. Whitfield</td><td>Individual</td>
+                  <td class="num">$5M</td><td class="num">80%</td><td class="num">$3M</td><td class="num">$17M</td>
+                  <td class="val-muted">Not sent</td>
+                </tr>
+                <tr>
+                  <td class="cell-name">Corvus Capital</td><td>Fund of funds</td>
+                  <td class="num">$80M</td><td class="num">74%</td><td class="num">$38M</td><td class="num">$259M</td>
+                  <td class="val-muted">Not sent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ============ Fund rail ============ -->
+        <aside class="rail" aria-label="Fund performance">
+          <div class="rail__block">
+            <span class="eyebrow">Fund performance</span>
+            <div class="metric-row"><span class="label">Net IRR</span><span class="value">31.4%</span></div>
+            <div class="metric-row"><span class="label">TVPI</span><span class="value">3.6&times;</span></div>
+            <div class="metric-row"><span class="label">DPI</span><span class="value">0.9&times;</span></div>
+            <div class="metric-row"><span class="label">RVPI</span><span class="value">2.7&times;</span></div>
+          </div>
+
+          <div class="rail__block">
+            <span class="eyebrow">NAV by quarter</span>
+            <div class="column-chart chart-h-150 rail__chart">
+              <div class="col"><div class="seg" style="height:46%"></div></div>
+              <div class="col"><div class="seg" style="height:54%"></div></div>
+              <div class="col"><div class="seg" style="height:61%"></div></div>
+              <div class="col"><div class="seg" style="height:72%"></div></div>
+              <div class="col"><div class="seg" style="height:78%"></div></div>
+              <div class="col"><div class="seg" style="height:92%"></div></div>
+            </div>
+            <div class="chart-axis">
+              <span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span><span>Q1</span><span>Q2</span>
+            </div>
+          </div>
+
+          <div class="rail__block">
+            <span class="eyebrow">Capital calls</span>
+            <div class="call-group">
+              <div class="metric-row metric-row--flush">
+                <span class="value">Call #12 — Fund IV</span>
+                <span class="body-sm val-caution">Due 30 Sep</span>
+              </div>
+              <p class="body-sm">$34M · 22 of 34 LPs funded</p>
+            </div>
+            <div class="call-group">
+              <div class="metric-row metric-row--flush">
+                <span class="value">Call #11 — Fund IV</span>
+                <span class="body-sm">Closed</span>
+              </div>
+              <p class="body-sm">$28M · fully funded</p>
+            </div>
+            <button class="btn btn--secondary btn--block rail__action" type="button">Open LP portal as viewer</button>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

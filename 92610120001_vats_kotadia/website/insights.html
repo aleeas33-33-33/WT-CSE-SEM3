@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Memos, portfolio news and firm announcements from Falcon Crest Ventures.">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>Insights — Falcon Crest Ventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html">Falcon Crest</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="thesis.html">Thesis</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="insights.html" aria-current="page">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn--primary" href="contact.html">Submit a pitch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap section">
+
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Writing &amp; announcements</span>
+        <h1 class="display-l">Insights</h1>
+      </div>
+      <div class="chip-row" role="group" aria-label="Filter by category">
+        <button class="chip is-active" type="button">All</button>
+        <button class="chip" type="button">Memos</button>
+        <button class="chip" type="button">Portfolio news</button>
+        <button class="chip" type="button">Firm</button>
+      </div>
+    </div>
+
+    <!-- ============ Feature + latest ============ -->
+    <div class="insight-split">
+
+      <article class="feature">
+        <div class="media-slot media-slot--wide">Feature image</div>
+        <span class="eyebrow">Memo · 12 Aug 2026 · 9 min read</span>
+        <h2 class="h1">The compute build-out is a credit market now, not a technology market</h2>
+        <p class="lead">Datacentre capacity is being financed the way toll roads are. What that changes for anyone selling into, or renting from, the largest clusters.</p>
+        <div class="byline">
+          <span class="avatar" aria-hidden="true">MR</span>
+          <p class="body-sm">M. Reyes, General Partner</p>
+        </div>
+      </article>
+
+      <div>
+        <h2 class="sr-only">Latest posts</h2>
+        <ul class="article-list">
+          <li>
+            <span class="eyebrow">Portfolio news · 04 Aug 2026</span>
+            <h3>Anduril closes an extension at a $30B valuation</h3>
+            <p>Falcon Crest participated from Fund IV.</p>
+          </li>
+          <li>
+            <span class="eyebrow">Memo · 22 Jul 2026</span>
+            <h3>Quick commerce works. Quick commerce economics still don't.</h3>
+            <p>Four years of Zepto unit data, generalised.</p>
+          </li>
+          <li>
+            <span class="eyebrow">Firm · 09 Jul 2026</span>
+            <h3>Fund V: $600M, same thesis</h3>
+            <p>Why we did not raise a growth vehicle.</p>
+          </li>
+          <li>
+            <span class="eyebrow">Memo · 28 Jun 2026</span>
+            <h3>Payroll is the last unbundled ledger</h3>
+            <p>Notes from five years with Deel.</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ============ More articles ============ -->
+    <div class="article-row">
+      <article class="article-card">
+        <div class="media-slot">Image</div>
+        <span class="eyebrow">Memo · 14 Jun 2026</span>
+        <h3>Defence procurement finally has a second door</h3>
+        <p>And it is narrower than founders think.</p>
+      </article>
+      <article class="article-card">
+        <div class="media-slot">Image</div>
+        <span class="eyebrow">Portfolio news · 02 Jun 2026</span>
+        <h3>CRED crosses 15M verified members</h3>
+        <p>The credit business is now the larger half.</p>
+      </article>
+      <article class="article-card">
+        <div class="media-slot">Image</div>
+        <span class="eyebrow">Memo · 19 May 2026</span>
+        <h3>What we got wrong about consumer AI</h3>
+        <p>Three passes we would take back.</p>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- ============ Newsletter ============ -->
+  <section class="band">
+    <div class="wrap newsletter">
+      <div>
+        <h2 class="h1">Memos, monthly</h2>
+        <p class="muted">One long piece a month. No event invitations.</p>
+      </div>
+      <form class="newsletter__form" data-validate novalidate data-success="You're subscribed. The next memo goes out on the first Tuesday.">
+        <div class="form-status status-inline"></div>
+        <div class="field field--inline">
+          <label class="sr-only" for="news-email">Email address</label>
+          <input type="email" id="news-email" name="email" placeholder="you@company.com"
+                 data-rule-required="Enter an email address to subscribe."
+                 data-rule-email="That email address doesn't look right — check for a missing @ or domain.">
+          <span class="field__error"></span>
+        </div>
+        <button class="btn btn--primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>&copy; <span data-year>2026</span> Falcon Crest Ventures</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="thesis.html">Thesis</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin/login.html">Admin console</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

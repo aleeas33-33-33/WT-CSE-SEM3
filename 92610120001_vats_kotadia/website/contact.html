@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Submit a pitch to Falcon Crest Ventures, or reach the team about press, LP enquiries and portfolio hiring.">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>Contact — Falcon Crest Ventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html">Falcon Crest</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="thesis.html">Thesis</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a class="btn btn--primary" href="contact.html">Submit a pitch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="contact-split">
+
+      <!-- ============ Pitch form — VALIDATED FORM 1 of 2 ============ -->
+      <div class="contact-form-col">
+        <span class="eyebrow">Get in touch</span>
+        <h1 class="display-l title-gap">Contact</h1>
+        <p class="lead list-heading">Pitches go through the form below. Everything else — press, LP enquiries, portfolio hiring — reaches a person directly.</p>
+
+        <form id="pitch-form" data-validate novalidate
+              data-success="Pitch received. You'll hear back within nine days, either way.">
+
+          <div class="form-status" role="status"></div>
+
+          <div class="field">
+            <label for="role">I am a</label>
+            <div class="segmented" role="radiogroup" aria-labelledby="role">
+              <label class="chip">
+                <input type="radio" name="role" value="founder" checked class="sr-only"> Founder
+              </label>
+              <label class="chip">
+                <input type="radio" name="role" value="lp" class="sr-only"> Limited partner
+              </label>
+              <label class="chip">
+                <input type="radio" name="role" value="press" class="sr-only"> Press
+              </label>
+              <label class="chip">
+                <input type="radio" name="role" value="other" class="sr-only"> Other
+              </label>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Okafor" autocomplete="name"
+                     data-rule-required="Enter your name so we know who is writing."
+                     data-rule-min="2|A name needs at least two characters."
+                     data-rule-pattern="^[A-Za-z .'\-]+$|Use letters, spaces, apostrophes and hyphens only.">
+              <span class="field__error"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email"
+                     data-rule-required="We need an email address to reply to."
+                     data-rule-email="That address doesn't look right — check for a missing @ or domain.">
+              <span class="field__error"></span>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Company name" autocomplete="organization"
+                     data-rule-required="Tell us the company name.">
+              <span class="field__error"></span>
+            </div>
+
+            <div class="field">
+              <label for="stage">Stage</label>
+              <select id="stage" name="stage"
+                      data-rule-required="Choose the stage you are raising at.">
+                <option value="">Select stage</option>
+                <option value="pre-seed">Pre-seed</option>
+                <option value="seed">Seed</option>
+                <option value="series-a">Series A</option>
+                <option value="series-b">Series B</option>
+                <option value="later">Later</option>
+              </select>
+              <span class="field__error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="website">Website or repository</label>
+            <input type="url" id="website" name="website" placeholder="https://company.com"
+                   data-rule-pattern="^https?:\/\/[^\s.]+\.[^\s]{2,}$|Include the full address, starting with http:// or https://">
+            <span class="field__hint">Optional, but it usually speeds up the first reply.</span>
+            <span class="field__error"></span>
+          </div>
+
+          <div class="field">
+            <label for="pitch">What are you building</label>
+            <textarea id="pitch" name="pitch" placeholder="Two or three sentences is plenty. What is scarce in your market, and why do you get it first?"
+                      data-rule-required="Tell us briefly what you are building."
+                      data-rule-min="40|Give us a little more — at least 40 characters."
+                      data-rule-max="600|Keep it under 600 characters; you can attach the detail below."></textarea>
+            <span class="char-count" data-for="pitch" data-limit="600">0 / 600</span>
+            <span class="field__error"></span>
+          </div>
+
+          <div class="field">
+            <label for="deck-input">Deck</label>
+            <div class="dropzone" data-input="deck-input" tabindex="0" role="button"
+                 aria-describedby="deck-hint">Drop a PDF here, or click to choose a file</div>
+            <input type="file" id="deck-input" name="deck" accept=".pdf,.key,.pptx" class="sr-only">
+            <span class="field__hint" id="deck-hint">PDF preferred. 20 MB maximum.</span>
+          </div>
+
+          <div class="field">
+            <label class="checkbox-inline consent-label">
+              <input type="checkbox" id="consent" name="consent"
+                     data-rule-checked="Please confirm before sending.">
+              I'm happy for Falcon Crest to keep these details on file.
+            </label>
+            <span class="field__error"></span>
+          </div>
+
+          <div class="submit-row">
+            <button class="btn btn--primary" type="submit">Send pitch</button>
+            <p class="body-sm">Median reply: 9 days. Always a reply.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- ============ Direct contacts ============ -->
+      <aside class="contact-side" aria-label="Direct contacts">
+        <div class="contact-side__block">
+          <span class="eyebrow">Founders</span>
+          <a href="mailto:pitch@falconcrest.vc">pitch@falconcrest.vc</a>
+        </div>
+        <div class="contact-side__block">
+          <span class="eyebrow">Limited partners</span>
+          <a href="mailto:ir@falconcrest.vc">ir@falconcrest.vc</a>
+        </div>
+        <div class="contact-side__block">
+          <span class="eyebrow">Press</span>
+          <a href="mailto:press@falconcrest.vc">press@falconcrest.vc</a>
+        </div>
+
+        <div class="contact-side__block">
+          <div class="office-grid">
+            <div class="office">
+              <span class="eyebrow">San Francisco</span>
+              <address>450 Bryant Street<br>San Francisco, CA 94107</address>
+            </div>
+            <div class="office">
+              <span class="eyebrow">Bengaluru</span>
+              <address>The Leela Galleria, Old Airport Road<br>Bengaluru 560008</address>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-side__block contact-side__block--last">
+          <div class="media-slot media-slot--wide">Map — office locations</div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>&copy; <span data-year>2026</span> Falcon Crest Ventures</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="thesis.html">Thesis</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin/login.html">Admin console</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

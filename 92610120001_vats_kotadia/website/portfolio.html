@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Falcon Crest Ventures portfolio — 61 active companies and 14 exits across compute, defence, fintech, commerce and work.">
+  <meta name="author" content="Vats Kotadia">
+  <meta name="enrolment" content="92610120001">
+  <title>Portfolio — Falcon Crest Ventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html">Falcon Crest</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="thesis.html">Thesis</a>
+        <a href="portfolio.html" aria-current="page">Portfolio</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn--primary" href="contact.html">Submit a pitch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap section">
+
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">61 active · 14 exited</span>
+        <h1 class="display-l">Portfolio</h1>
+      </div>
+      <p class="body-sm measure-narrow">Ordered by first cheque. We lead about a third of the rounds we join.</p>
+    </div>
+
+    <!-- ============ Filters ============ -->
+    <div class="filter-bar">
+      <div class="chip-row" role="group" aria-label="Filter by sector">
+        <button class="chip" type="button" data-filter-sector="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter-sector="ai" aria-pressed="false">Compute &amp; AI</button>
+        <button class="chip" type="button" data-filter-sector="defence" aria-pressed="false">Defence &amp; space</button>
+        <button class="chip" type="button" data-filter-sector="fintech" aria-pressed="false">Fintech</button>
+        <button class="chip" type="button" data-filter-sector="commerce" aria-pressed="false">Commerce</button>
+        <button class="chip" type="button" data-filter-sector="work" aria-pressed="false">Work</button>
+      </div>
+
+      <div class="filter-bar__right">
+        <div class="chip-row" role="group" aria-label="Filter by status">
+          <button class="chip" type="button" data-filter-status="active" aria-pressed="true">Active</button>
+          <button class="chip" type="button" data-filter-status="exited" aria-pressed="false">Exited</button>
+          <button class="chip" type="button" data-filter-status="all" aria-pressed="false">Both</button>
+        </div>
+        <div class="field field--flush">
+          <label class="sr-only" for="company-search">Search companies</label>
+          <input type="text" id="company-search" placeholder="Search companies" autocomplete="off">
+        </div>
+      </div>
+    </div>
+
+    <p class="body-sm list-heading">Showing <span id="result-count">8 companies</span></p>
+
+    <!-- ============ Company grid ============ -->
+    <div class="company-grid" id="company-grid">
+
+      <article class="company-card" data-sector="defence" data-status="active">
+        <div class="company-card__logo">SpaceX</div>
+        <div>
+          <span class="company-card__meta">Space · Series B</span>
+          <h2>SpaceX</h2>
+          <p>Launch vehicles and orbital internet.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2013 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="ai" data-status="active">
+        <div class="company-card__logo">Anthropic</div>
+        <div>
+          <span class="company-card__meta">AI · Series A</span>
+          <h2>Anthropic</h2>
+          <p>Frontier models and AI safety research.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2021 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="fintech" data-status="active">
+        <div class="company-card__logo">Stripe</div>
+        <div>
+          <span class="company-card__meta">Fintech · Seed</span>
+          <h2>Stripe</h2>
+          <p>Payments infrastructure for the internet.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2012 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="ai" data-status="active">
+        <div class="company-card__logo">Databricks</div>
+        <div>
+          <span class="company-card__meta">Data · Series A</span>
+          <h2>Databricks</h2>
+          <p>The lakehouse platform for analytics and AI.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2015 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="defence" data-status="active">
+        <div class="company-card__logo">Anduril</div>
+        <div>
+          <span class="company-card__meta">Defence · Seed</span>
+          <h2>Anduril</h2>
+          <p>Autonomous systems for defence.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2017 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="commerce" data-status="active">
+        <div class="company-card__logo">Zepto</div>
+        <div>
+          <span class="company-card__meta">Commerce · Series A</span>
+          <h2>Zepto</h2>
+          <p>Ten-minute grocery delivery in India.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2021 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="fintech" data-status="active">
+        <div class="company-card__logo">CRED</div>
+        <div>
+          <span class="company-card__meta">Fintech · Series B</span>
+          <h2>CRED</h2>
+          <p>Credit-card payments and member rewards.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2019 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="work" data-status="active">
+        <div class="company-card__logo">Deel</div>
+        <div>
+          <span class="company-card__meta">Work · Seed</span>
+          <h2>Deel</h2>
+          <p>Global payroll, hiring and compliance.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2019 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <!-- Revealed by the "Load more" button -->
+      <article class="company-card" data-sector="ai" data-status="exited" data-extra hidden>
+        <div class="company-card__logo">Verilume</div>
+        <div>
+          <span class="company-card__meta">Silicon · Series B</span>
+          <h2>Verilume</h2>
+          <p>Photonic interconnects for training clusters.</p>
+        </div>
+        <p class="company-card__foot">Acquired 2024 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="fintech" data-status="exited" data-extra hidden>
+        <div class="company-card__logo">Tallow</div>
+        <div>
+          <span class="company-card__meta">Fintech · Series A</span>
+          <h2>Tallow</h2>
+          <p>Treasury automation for mid-market importers.</p>
+        </div>
+        <p class="company-card__foot">IPO 2023 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="commerce" data-status="active" data-extra hidden>
+        <div class="company-card__logo">Harborline</div>
+        <div>
+          <span class="company-card__meta">Logistics · Seed</span>
+          <h2>Harborline</h2>
+          <p>Port-side customs clearing built as an API.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2022 · <a href="company.html">Company profile</a></p>
+      </article>
+
+      <article class="company-card" data-sector="work" data-status="active" data-extra hidden>
+        <div class="company-card__logo">Ledgerly</div>
+        <div>
+          <span class="company-card__meta">Work · Seed</span>
+          <h2>Ledgerly</h2>
+          <p>Contractor compliance for eleven jurisdictions.</p>
+        </div>
+        <p class="company-card__foot">First cheque 2023 · <a href="company.html">Company profile</a></p>
+      </article>
+
+    </div>
+
+    <div class="empty-state" id="empty-state" hidden>
+      <p>No companies match that combination. Try a different sector or clear the search.</p>
+    </div>
+
+    <div class="load-more">
+      <button class="btn btn--secondary" type="button" id="load-more">Load 53 more companies</button>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>&copy; <span data-year>2026</span> Falcon Crest Ventures</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="thesis.html">Thesis</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin/login.html">Admin console</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

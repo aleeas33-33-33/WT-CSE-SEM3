@@ -577,9 +577,11 @@ p {
 
 .logo-cell {
   position: relative;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   min-height: 128px;
+  padding: 0 12px 16px;
   overflow: hidden;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -599,7 +601,7 @@ p {
 }
 
 .logo-cell:hover::after {
-  background: linear-gradient(to top, rgba(16, 24, 32, 0.86), rgba(16, 24, 32, 0.34));
+  background: linear-gradient(to top, rgba(16, 24, 32, 0.92) 0%, rgba(16, 24, 32, 0.5) 42%, rgba(16, 24, 32, 0.28) 100%);
 }
 
 .logo-cell img {
@@ -614,6 +616,7 @@ p {
 .logo-cell span {
   position: relative;
   z-index: 2;
+  text-shadow: 0 1px 3px rgba(16, 24, 32, 0.65);
 }
 
 .logo-cell::after {
@@ -621,7 +624,7 @@ p {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(16, 24, 32, 0.78), rgba(16, 24, 32, 0.22));
+  background: linear-gradient(to top, rgba(16, 24, 32, 0.88) 0%, rgba(16, 24, 32, 0.42) 38%, rgba(16, 24, 32, 0.2) 100%);
   pointer-events: none;
 }
 
